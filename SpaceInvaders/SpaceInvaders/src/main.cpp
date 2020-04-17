@@ -1,3 +1,5 @@
+//Space Invaders: Replica v0.2 by Artem B.
+
 #include <iostream> // for input/output stuff
 #include "window.h" // window class
 #include "player.h" // player class
@@ -129,6 +131,10 @@ int main() {
 
 		if (scoreManager.score == 4) { // if score reaches 4 player wins
 			window.draw(scoreManager.winDisplay); // drawing the winning title
+			player.isDrawnPlayer = false;
+			barrier1.isDrawnBarrier = false;
+			barrier2.isDrawnBarrier = false;
+			barrier3.isDrawnBarrier = false;
 		}
 
 		if (player.playerHealth == 0) { // if health reaches 0 player loses
@@ -138,6 +144,9 @@ int main() {
 			alien2.isDrawnAlien = false;
 			alien3.isDrawnAlien = false;
 			alien4.isDrawnAlien = false;
+			barrier1.isDrawnBarrier = false;
+			barrier2.isDrawnBarrier = false;
+			barrier3.isDrawnBarrier = false;
 		}
 
 		if (player.isDrawnPlayer) { // if bool isDrawnPlayer is true then draw the player and check the collisions
